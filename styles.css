@@ -351,8 +351,8 @@ h2 {
 /* ---------- Gown grid ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 3rem 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3.5rem 2.5rem;
 }
 .gown {
   cursor: pointer;
@@ -371,7 +371,7 @@ h2 {
   border-radius: 200px 200px 6px 6px;
   background:
     radial-gradient(ellipse at 50% 30%, #fff 0%, transparent 65%),
-    var(--card-bg, var(--blush));
+    var(--blush);
   border: 1px solid rgba(192, 154, 95, .5);
   outline: 1px solid rgba(192, 154, 95, .35);
   outline-offset: 6px;
@@ -388,9 +388,18 @@ h2 {
   background-size: 60px;
   opacity: .7;
 }
-.gown__frame svg { position: relative; width: 82%; height: auto; margin-bottom: -2px; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+.gown__photo, .modal__art .gown__photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16% 8% 5%;
+  mix-blend-mode: multiply; /* melts the white studio backdrop into the blush card */
+  filter: brightness(1.07) contrast(1.03);
+  transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+}
 .gown:hover .gown__frame { transform: translateY(-6px); box-shadow: var(--shadow); }
-.gown:hover .gown__frame svg { transform: scale(1.04) translateY(-4px); }
+.gown:hover .gown__photo { transform: scale(1.04) translateY(-4px); }
 .gown__badge {
   position: absolute;
   top: 22%;
@@ -677,15 +686,14 @@ h2 {
 }
 .modal__body { display: grid; grid-template-columns: 1fr 1.1fr; }
 .modal__art {
-  background: radial-gradient(ellipse at 50% 30%, #fff 0%, transparent 65%), var(--card-bg, var(--blush));
+  background: radial-gradient(ellipse at 50% 30%, #fff 0%, transparent 65%), var(--blush);
   display: grid;
-  place-items: end center;
-  padding-top: 2rem;
-  min-height: 420px;
+  place-items: center;
+  min-height: 520px;
   position: relative;
 }
 .modal__art::before { content: ""; position: absolute; inset: 0; background-image: var(--damask); background-size: 60px; opacity: .7; }
-.modal__art svg { width: 80%; height: auto; position: relative; }
+.modal__art .gown__photo { position: absolute; inset: 0; padding: 8% 10%; }
 .modal__info { padding: 3rem 2.6rem; }
 .modal__name { font-size: 2.6rem; color: var(--wine); line-height: 1.05; margin-bottom: 1rem; }
 .modal__desc { color: var(--muted); margin: 0 0 1.4rem; }
@@ -714,13 +722,14 @@ h2 {
   .maison__text { text-align: center; }
   .fleuron--left { margin-left: auto; }
   .modal__body { grid-template-columns: 1fr; }
-  .modal__art { min-height: 300px; }
-  .modal__art svg { width: 55%; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 1.5rem; }
+  .modal__art { min-height: 380px; }
 }
 @media (max-width: 600px) {
   body { font-size: 18px; }
   .announce span:not(:first-child) { display: none; }
   .form__row { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
   .hero { padding: 3.5rem 1rem 5.5rem; min-height: auto; }
   .hero__frame { padding: 3.5rem 1.2rem; }
   .hero__actions .btn { width: 100%; }
