@@ -133,12 +133,21 @@ h2 {
 .logo {
   text-decoration: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 14px;
   color: var(--wine);
   line-height: 1;
 }
-.logo__bow { width: 30px; height: 19px; color: var(--rose-deep); margin-bottom: 6px; }
+.logo__mark {
+  width: 56px;
+  height: auto;
+  filter: drop-shadow(0 2px 3px rgba(107, 34, 52, .25));
+  transition: transform .8s var(--ease, ease);
+}
+.logo:hover .logo__mark { transform: rotate(-6deg) scale(1.06); }
+.logo__text { display: flex; flex-direction: column; align-items: center; }
+.logo--stacked { flex-direction: column; gap: 16px; }
+.logo--stacked .logo__mark { width: 96px; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .35)); }
 .logo__word {
   font-family: var(--caps);
   font-size: 1.95rem;
@@ -483,41 +492,15 @@ h2 {
 }
 .maison__text h2 { margin-bottom: 0; }
 .maison__text p { color: var(--ink); }
-.cameo {
-  aspect-ratio: 4 / 5;
-  max-width: 420px;
+.maison__art { margin: 0; text-align: center; }
+.maison__logo {
+  width: min(100%, 420px);
+  height: auto;
   margin: 0 auto;
-  border-radius: 50%;
-  padding: 18px;
-  background: var(--gold-grad);
-  box-shadow: var(--shadow);
-  position: relative;
+  filter: drop-shadow(0 30px 40px rgba(107, 34, 52, .22));
+  animation: bob 7s ease-in-out infinite;
 }
-.cameo::before { /* lace ring */
-  content: "";
-  position: absolute;
-  inset: -16px;
-  border-radius: 50%;
-  border: 10px dotted var(--rose);
-  opacity: .7;
-}
-.cameo__inner {
-  width: 100%; height: 100%;
-  border-radius: 50%;
-  background:
-    radial-gradient(ellipse at 50% 40%, #fff 0%, var(--blush) 60%, var(--rose) 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--ivory);
-  position: relative;
-  overflow: hidden;
-}
-.cameo__inner::before { content: ""; position: absolute; inset: 0; background-image: var(--damask); background-size: 60px; opacity: .8; }
-.cameo__bow { width: 80px; height: 50px; color: var(--rose-deep); position: relative; }
-.cameo__m { font-family: var(--script); font-size: clamp(7rem, 14vw, 10rem); color: var(--wine); line-height: .9; position: relative; }
-.cameo__est { font-family: var(--caps); font-size: .72rem; letter-spacing: .32em; color: var(--muted); position: relative; margin-top: .6rem; }
+.maison__art figcaption { font-family: var(--caps); font-size: .72rem; letter-spacing: .32em; color: var(--muted); margin-top: 1.4rem; }
 .promises { list-style: none; padding: 0; margin: 1.8rem 0 0; display: grid; gap: .6rem; }
 .promises li { font-family: var(--caps); font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; color: var(--wine); }
 .promises span { color: var(--gold); margin-right: .6rem; }
@@ -650,7 +633,6 @@ h2 {
   filter: none;
 }
 .logo--light { color: var(--gold-light); }
-.logo--light .logo__bow { color: var(--rose); }
 .logo--light .logo__sub { color: var(--rose); }
 .footer .fleuron { color: var(--gold); opacity: .7; }
 .footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; font-family: var(--caps); font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 1.6rem; }
@@ -741,6 +723,7 @@ h2 {
   box-shadow: 0 0 0 4px var(--ivory), 0 0 0 5px var(--gold), var(--shadow);
   display: grid;
   place-items: center;
+  overflow: hidden;
   z-index: 4;
   animation: fadeUp 1s var(--ease) 1.5s both, bob 5s ease-in-out 2.5s infinite;
 }
@@ -792,9 +775,7 @@ h2 {
 
 /* Bows that breathe */
 @keyframes sway { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
-.logo__bow, .quote__bow { animation: sway 4.5s ease-in-out infinite; transform-origin: 50% 40%; }
-.cameo { animation: bob 7s ease-in-out infinite; }
-.cameo__bow { animation: sway 5s ease-in-out infinite; transform-origin: 50% 40%; }
+.quote__bow { animation: sway 4.5s ease-in-out infinite; transform-origin: 50% 40%; }
 
 /* Cards */
 .gown__frame::after {
@@ -865,7 +846,9 @@ h2 {
   .nav__links { display: none; }
   .nav__toggle { display: block; grid-column: 3; grid-row: 1; }
   .logo { grid-column: 2; grid-row: 1; }
-  .logo__word { font-size: 1.6rem; }
+  .logo__word { font-size: 1.5rem; }
+  .logo { gap: 10px; }
+  .logo__mark { width: 42px; }
   .maison { grid-template-columns: 1fr; }
   .maison__text { text-align: center; }
   .fleuron--left { margin-left: auto; }

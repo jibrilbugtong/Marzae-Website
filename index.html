@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MARZÉ — Maison de Location | Luxury Dress Rental</title>
   <meta name="description" content="MARZÉ is a luxury dress rental maison. Baroque gowns, lace, ribbons and couture for galas, débuts, weddings and soirées." />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
@@ -79,9 +79,11 @@
         <li><a href="#ritual">How It Works</a></li>
       </ul>
       <a href="#top" class="logo" aria-label="MARZÉ home">
-        <svg class="logo__bow"><use href="#bow" /></svg>
-        <span class="logo__word">MARZ<span class="logo__e">É</span></span>
-        <span class="logo__sub">Maison de Location</span>
+        <img class="logo__mark" src="assets/logo-small.png" alt="" width="48" height="56" />
+        <span class="logo__text">
+          <span class="logo__word">MARZ<span class="logo__e">É</span></span>
+          <span class="logo__sub">Maison de Location</span>
+        </span>
       </a>
       <ul class="nav__links nav__links--right">
         <li><a href="#maison">The Maison</a></li>
@@ -207,15 +209,10 @@
 
     <!-- MAISON / ABOUT -->
     <section class="section maison" id="maison">
-      <div class="maison__art reveal" aria-hidden="true">
-        <div class="cameo">
-          <div class="cameo__inner">
-            <svg class="cameo__bow"><use href="#bow" /></svg>
-            <span class="cameo__m">M</span>
-            <span class="cameo__est">Est. MMXXVI</span>
-          </div>
-        </div>
-      </div>
+      <figure class="maison__art reveal">
+        <img class="maison__logo" src="assets/logo.webp" alt="The MARZÉ monogram, a calligraphic M inside an oval lace frame" width="591" height="720" />
+        <figcaption>Est. MMXXVI</figcaption>
+      </figure>
       <div class="maison__text reveal">
         <p class="script">La Maison</p>
         <h2>A Love Letter to Lace</h2>
@@ -344,10 +341,12 @@
   <footer class="footer">
     <div class="lace-edge lace-edge--top" aria-hidden="true"></div>
     <div class="footer__inner">
-      <a href="#top" class="logo logo--light">
-        <svg class="logo__bow"><use href="#bow" /></svg>
-        <span class="logo__word">MARZ<span class="logo__e">É</span></span>
-        <span class="logo__sub">Maison de Location</span>
+      <a href="#top" class="logo logo--light logo--stacked" aria-label="MARZÉ, back to top">
+        <img class="logo__mark" src="assets/logo-small.png" alt="" width="96" height="112" />
+        <span class="logo__text">
+          <span class="logo__word">MARZ<span class="logo__e">É</span></span>
+          <span class="logo__sub">Maison de Location</span>
+        </span>
       </a>
       <svg class="fleuron"><use href="#fleuron" /></svg>
       <nav class="footer__links">
