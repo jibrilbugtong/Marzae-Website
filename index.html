@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MARZÉ — Maison de Location | Luxury Dress Rental</title>
+  <meta name="description" content="MARZÉ is a luxury dress rental maison. Baroque gowns, lace, ribbons and couture for galas, débuts, weddings and soirées." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Reusable ornaments -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Baroque scroll corner (top-left orientation) -->
+      <symbol id="corner" viewBox="0 0 160 160">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M6 154 V40 C6 18 18 6 40 6 H154" />
+          <path d="M14 154 V46 C14 26 26 14 46 14 H154" stroke-width=".8" />
+          <path d="M40 6 C40 30 30 40 6 40" />
+          <path d="M26 26 C46 22 62 34 58 50 C55 62 40 62 38 52 C36 44 46 40 50 46" />
+          <path d="M60 22 C80 14 100 22 112 18 C122 15 128 8 126 4" />
+          <path d="M22 60 C14 80 22 100 18 112 C15 122 8 128 4 126" />
+          <path d="M70 30 C86 30 92 42 84 48 C78 52 72 46 76 42" />
+          <path d="M30 70 C30 86 42 92 48 84 C52 78 46 72 42 76" />
+          <path d="M96 26 C108 34 120 30 132 26" stroke-width="1" />
+          <path d="M26 96 C34 108 30 120 26 132" stroke-width="1" />
+        </g>
+        <g fill="currentColor">
+          <circle cx="26" cy="26" r="3.2" />
+          <circle cx="132" cy="26" r="2" />
+          <circle cx="26" cy="132" r="2" />
+          <path d="M58 58 c6-2 10 2 8 8 c-6 2-10-2-8-8z" />
+        </g>
+      </symbol>
+
+      <!-- Little bow -->
+      <symbol id="bow" viewBox="0 0 64 40">
+        <g fill="currentColor">
+          <path d="M32 18 C24 6 6 2 4 10 C2 18 14 26 32 22 Z" />
+          <path d="M32 18 C40 6 58 2 60 10 C62 18 50 26 40 22 L32 22 Z" />
+          <path d="M28 20 L18 38 L24 36 L27 40 L32 22 Z" />
+          <path d="M36 20 L46 38 L40 36 L37 40 L32 22 Z" />
+          <ellipse cx="32" cy="20" rx="4.5" ry="4" />
+        </g>
+      </symbol>
+
+      <!-- Fleuron divider -->
+      <symbol id="fleuron" viewBox="0 0 240 24">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+          <path d="M4 12 H86" />
+          <path d="M154 12 H236" />
+          <path d="M86 12 C96 2 108 2 112 10 C114 14 110 18 106 14" />
+          <path d="M154 12 C144 2 132 2 128 10 C126 14 130 18 134 14" />
+          <path d="M86 12 C96 22 108 22 112 14" />
+          <path d="M154 12 C144 22 132 22 128 14" />
+        </g>
+        <path d="M120 3 L125 12 L120 21 L115 12 Z" fill="currentColor" />
+        <circle cx="4" cy="12" r="2" fill="currentColor" />
+        <circle cx="236" cy="12" r="2" fill="currentColor" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="announce">
+    <span>Complimentary atelier fitting &amp; steaming with every rental</span>
+    <span class="dot">✦</span>
+    <span>Now booking the Saison Rose collection</span>
+  </div>
+
+  <header class="nav" id="top">
+    <nav class="nav__inner">
+      <ul class="nav__links nav__links--left">
+        <li><a href="#collection">The Collection</a></li>
+        <li><a href="#ritual">How It Works</a></li>
+      </ul>
+      <a href="#top" class="logo" aria-label="MARZÉ home">
+        <svg class="logo__bow"><use href="#bow" /></svg>
+        <span class="logo__word">MARZ<span class="logo__e">É</span></span>
+        <span class="logo__sub">Maison de Location</span>
+      </a>
+      <ul class="nav__links nav__links--right">
+        <li><a href="#maison">The Maison</a></li>
+        <li><a href="#appointment" class="nav__cta">Book a Fitting</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav__mobile" hidden>
+      <a href="#collection">The Collection</a>
+      <a href="#ritual">How It Works</a>
+      <a href="#maison">The Maison</a>
+      <a href="#faq">Questions</a>
+      <a href="#appointment">Book a Fitting</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__damask" aria-hidden="true"></div>
+      <div class="hero__frame reveal">
+        <svg class="corner corner--tl"><use href="#corner" /></svg>
+        <svg class="corner corner--tr"><use href="#corner" /></svg>
+        <svg class="corner corner--bl"><use href="#corner" /></svg>
+        <svg class="corner corner--br"><use href="#corner" /></svg>
+
+        <p class="script hero__kicker">Bienvenue à la Maison</p>
+        <h1 class="hero__title">MARZ<span class="logo__e">É</span></h1>
+        <svg class="fleuron"><use href="#fleuron" /></svg>
+        <p class="hero__lede">Couture gowns to borrow, memories to keep forever.<br />Lace, silk &amp; ribbon — curated for the evenings you'll never forget.</p>
+        <div class="hero__actions">
+          <a href="#collection" class="btn btn--wine">Explore the Collection</a>
+          <a href="#appointment" class="btn btn--ghost">Reserve a Fitting</a>
+        </div>
+      </div>
+      <div class="lace-edge" aria-hidden="true"></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Galas</span><i>✦</i><span>Débutantes</span><i>✦</i><span>Weddings</span><i>✦</i><span>Soirées</span><i>✦</i><span>Proms</span><i>✦</i><span>Garden Parties</span><i>✦</i><span>Photoshoots</span><i>✦</i>
+        <span>Galas</span><i>✦</i><span>Débutantes</span><i>✦</i><span>Weddings</span><i>✦</i><span>Soirées</span><i>✦</i><span>Proms</span><i>✦</i><span>Garden Parties</span><i>✦</i><span>Photoshoots</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- COLLECTION -->
+    <section class="section collection" id="collection">
+      <header class="section__head reveal">
+        <p class="script">La Collection</p>
+        <h2>Gowns Fit for Versailles</h2>
+        <svg class="fleuron"><use href="#fleuron" /></svg>
+        <p class="section__intro">Each piece is hand-selected, steamed and pressed in our atelier, then delivered to you dressed in tissue and ribbon.</p>
+      </header>
+
+      <div class="filters reveal" role="tablist" aria-label="Filter gowns">
+        <button class="filter is-active" data-filter="all">All Gowns</button>
+        <button class="filter" data-filter="ball">Ball Gowns</button>
+        <button class="filter" data-filter="cocktail">Cocktail</button>
+        <button class="filter" data-filter="bridal">Bridal &amp; White</button>
+        <button class="filter" data-filter="debut">Débutante</button>
+      </div>
+
+      <div class="grid" id="grid"><!-- filled by script.js --></div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote">
+      <div class="quote__inner reveal">
+        <svg class="quote__bow"><use href="#bow" /></svg>
+        <blockquote>
+          <p>“Qu’elles portent de la dentelle.”</p>
+          <cite>Let them wear lace.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- RITUAL -->
+    <section class="section ritual" id="ritual">
+      <header class="section__head reveal">
+        <p class="script">Le Rituel</p>
+        <h2>How It Works</h2>
+        <svg class="fleuron"><use href="#fleuron" /></svg>
+      </header>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num">I</span>
+          <h3>Choose</h3>
+          <p>Browse the collection and fall in love. Reserve your gown for your date with a small deposit.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">II</span>
+          <h3>Fit</h3>
+          <p>Visit the atelier for a private fitting. We pin, adjust and style you down to the ribbon.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">III</span>
+          <h3>Wear</h3>
+          <p>Your gown arrives steamed and boxed. Walk in like the evening was planned around you.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">IV</span>
+          <h3>Return</h3>
+          <p>Send it back within three days. Cleaning and care are entirely ours — no fuss, no stains to fret.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- MAISON / ABOUT -->
+    <section class="section maison" id="maison">
+      <div class="maison__art reveal" aria-hidden="true">
+        <div class="cameo">
+          <div class="cameo__inner">
+            <svg class="cameo__bow"><use href="#bow" /></svg>
+            <span class="cameo__m">M</span>
+            <span class="cameo__est">Est. MMXXVI</span>
+          </div>
+        </div>
+      </div>
+      <div class="maison__text reveal">
+        <p class="script">La Maison</p>
+        <h2>A Love Letter to Lace</h2>
+        <svg class="fleuron fleuron--left"><use href="#fleuron" /></svg>
+        <p>MARZÉ was born from a simple belief: every woman deserves a moment that feels like a painting. Inspired by the gilded salons of Versailles, the softness of ribbon and the quiet romance of antique lace, we built a wardrobe meant to be shared.</p>
+        <p>Our gowns are rented, not retired — worn to débuts, weddings and candlelit dinners, then lovingly restored for the next chapter. Luxury, without the closet full of once-worn dresses.</p>
+        <ul class="promises">
+          <li><span>✦</span> Hand-steamed &amp; professionally cleaned</li>
+          <li><span>✦</span> Complimentary minor alterations</li>
+          <li><span>✦</span> Damage care included with every rental</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section notes">
+      <header class="section__head reveal">
+        <p class="script">Billets Doux</p>
+        <h2>Love Notes</h2>
+        <svg class="fleuron"><use href="#fleuron" /></svg>
+      </header>
+      <div class="notes__grid">
+        <figure class="note reveal">
+          <blockquote>“I felt like a princess in a Sofia Coppola film. Everyone asked where my gown was from.”</blockquote>
+          <figcaption>— Isabella, débutante</figcaption>
+        </figure>
+        <figure class="note reveal">
+          <blockquote>“The fitting was so intimate and fun. The dress came boxed with ribbon — I nearly cried.”</blockquote>
+          <figcaption>— Camille, wedding guest</figcaption>
+        </figure>
+        <figure class="note reveal">
+          <blockquote>“A fraction of the price of buying, and honestly more beautiful than anything in the shops.”</blockquote>
+          <figcaption>— Margaux, gala</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <header class="section__head reveal">
+        <p class="script">Questions</p>
+        <h2>Petites Questions</h2>
+        <svg class="fleuron"><use href="#fleuron" /></svg>
+      </header>
+      <div class="faq__list reveal">
+        <details>
+          <summary>How long is a rental?</summary>
+          <p>Our standard rental is three days — collect the day before your event and return two days after. Longer rentals can be arranged on request.</p>
+        </details>
+        <details>
+          <summary>How far ahead should I book?</summary>
+          <p>We recommend reserving two to four weeks before your event, especially during débutante and wedding season. Last-minute? Message us — we'll always try.</p>
+        </details>
+        <details>
+          <summary>What if it doesn't fit?</summary>
+          <p>That's what the fitting is for. We offer complimentary minor alterations, and if a gown simply isn't right, we'll help you choose another.</p>
+        </details>
+        <details>
+          <summary>What happens if the dress gets damaged?</summary>
+          <p>Small spills and loose threads are covered — that's part of our care. For significant damage, we'll assess it gently and fairly with you.</p>
+        </details>
+        <details>
+          <summary>Do I need to clean it before returning?</summary>
+          <p>Please don't! Professional cleaning is included. Simply return it in its garment bag and we'll take it from there.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section class="section appointment" id="appointment">
+      <div class="card-frame reveal">
+        <svg class="corner corner--tl"><use href="#corner" /></svg>
+        <svg class="corner corner--tr"><use href="#corner" /></svg>
+        <svg class="corner corner--bl"><use href="#corner" /></svg>
+        <svg class="corner corner--br"><use href="#corner" /></svg>
+
+        <header class="section__head">
+          <p class="script">Rendez-vous</p>
+          <h2>Reserve Your Fitting</h2>
+          <svg class="fleuron"><use href="#fleuron" /></svg>
+          <p class="section__intro">Tell us about your evening and we'll prepare a private fitting just for you.</p>
+        </header>
+
+        <form class="form" id="form" novalidate>
+          <div class="form__row">
+            <label>Your Name
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>Email
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+          </div>
+          <div class="form__row">
+            <label>Event Date
+              <input type="date" name="date" required />
+            </label>
+            <label>Occasion
+              <select name="occasion">
+                <option>Débutante</option>
+                <option>Wedding</option>
+                <option>Gala / Ball</option>
+                <option>Prom</option>
+                <option>Photoshoot</option>
+                <option>Something else</option>
+              </select>
+            </label>
+          </div>
+          <label>Gown of Interest
+            <select name="gown" id="gownSelect">
+              <option value="">I'd love a recommendation</option>
+            </select>
+          </label>
+          <label>A Few Words
+            <textarea name="message" rows="4" placeholder="Your size, colour dreams, the vibe of the evening…"></textarea>
+          </label>
+          <button type="submit" class="btn btn--wine btn--full">Request My Fitting</button>
+          <p class="form__success" role="status" hidden>
+            <svg><use href="#bow" /></svg>
+            Merci, darling. Your request is tied with a ribbon — we'll be in touch very soon.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="lace-edge lace-edge--top" aria-hidden="true"></div>
+    <div class="footer__inner">
+      <a href="#top" class="logo logo--light">
+        <svg class="logo__bow"><use href="#bow" /></svg>
+        <span class="logo__word">MARZ<span class="logo__e">É</span></span>
+        <span class="logo__sub">Maison de Location</span>
+      </a>
+      <svg class="fleuron"><use href="#fleuron" /></svg>
+      <nav class="footer__links">
+        <a href="#collection">Collection</a>
+        <a href="#ritual">How It Works</a>
+        <a href="#faq">Questions</a>
+        <a href="#appointment">Book a Fitting</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p class="footer__note">By appointment only · Atelier hours Tue–Sun, 11am–7pm</p>
+      <p class="footer__copy">© <span id="year"></span> MARZÉ. Fait avec amour.</p>
+    </div>
+  </footer>
+
+  <!-- Gown modal -->
+  <dialog class="modal" id="modal">
+    <button class="modal__close" aria-label="Close">×</button>
+    <div class="modal__body">
+      <div class="modal__art"></div>
+      <div class="modal__info">
+        <p class="script modal__tag"></p>
+        <h3 class="modal__name"></h3>
+        <p class="modal__desc"></p>
+        <dl class="modal__meta"></dl>
+        <p class="modal__price"></p>
+        <a href="#appointment" class="btn btn--wine modal__book">Reserve This Gown</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
